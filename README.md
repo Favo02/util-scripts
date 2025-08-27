@@ -18,12 +18,16 @@ sudo ./restic-backup.sh <BACKUP_DIR> <RESTIC_REPO>
 </details>
 
 <details>
-<summary><strong>mp4-to-DHxHD.sh</strong> - Convert MP4 to DNxHD format</summary>
+<summary><strong>video-converter.sh</strong> - Video format converter</summary>
 
-Converts MP4 files to DaVinci Resolve-compatible DNxHD format (MP4 files import as audio-only in DaVinci).
+Converts between video formats for DaVinci Resolve workflows.
 
 ```bash
-./mp4-to-DHxHD.sh <directory>
+# Convert MP4 to DNxHD (for DaVinci import)
+./video-converter.sh to-dnxhd <directory>
+
+# Convert MOV to mobile MP4 (for DaVinci export)
+./video-converter.sh to-mobile <directory>
 ```
 
 **Requirements:** `ffmpeg`
@@ -46,6 +50,6 @@ python gpx-editor.py [OPTIONS] [DIRECTORY]
 -c    # count points
 ```
 
-**Requirements:** `gpxpy`
+**Requirements:** `pip gpxpy`
 
 </details>
