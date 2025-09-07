@@ -55,6 +55,33 @@ python gpx-editor.py [OPTIONS] [DIRECTORY]
 </details>
 
 <details>
+<summary><strong>print_photos.py</strong> - Photo sheet creator for printing</summary>
+
+Creates optimized 4x6 inch photo sheets for printing. Automatically arranges photos in grids:
+- Large photos: Arranged in space-optimized 2x1 grids
+- Small photos: Arranged in space-optimized 2x2 grids
+- Applies color and brightness enhancements for better print quality
+- Can directly send sheets to the default printer
+
+```bash
+python print_photos.py <big_folder> <small_folder> [OPTIONS]
+
+# Options:
+-o DIR    # output folder (default: TOPRINT)
+-p        # print automatically to default printer
+-v        # verbose output with processing details
+
+# Examples:
+python print_photos.py Photos/Large Photos/Small
+python print_photos.py Big Small -o PrintReady
+python print_photos.py Big Small -p -v
+```
+
+**Requirements:** `pip pillow`
+
+</details>
+
+<details>
 <summary><strong>immich</strong> - Immich utility scripts</summary>
 
 Simple utility scripts for Immich:
